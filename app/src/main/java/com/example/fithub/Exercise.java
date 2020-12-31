@@ -3,6 +3,7 @@ package com.example.fithub;
 import java.util.Vector;
 
 public class Exercise {
+    private int id;
     private String name;
     private int minute;
     private String description;
@@ -15,7 +16,8 @@ public class Exercise {
 //        this.minute = minute;
 //        this.types = types;
 //    }
-    public Exercise(String name, int minute, String description, Vector<Type> types, int image) {
+    public Exercise(int id, String name, int minute, String description, Vector<Type> types, int image) {
+        this.id = id;
         this.name = name;
         this.minute = minute;
         this.description = description;
@@ -55,7 +57,12 @@ public class Exercise {
 
     public void setImage(int image) { this.image = image; }
 
-//    public Type getTypes() {
+    public int getId() {
+        return id;
+    }
+
+
+    //    public Type getTypes() {
 //        return types;
 //    }
 //
