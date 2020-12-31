@@ -17,11 +17,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String createExerciseTable = "CREATE TABLE exercises(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, minute INTEGER);";
+        String createExerciseTable = "CREATE TABLE exercises(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, minute INTEGER, description TEXT, image TEXT);";
         db.execSQL(createExerciseTable);
         String createTypeTable = "CREATE TABLE types(id INTEGER PRIMARY KEY AUTOINCREMENT, ex_id INTEGER, name TEXT, description TEXT, reps INTEGER, FOREIGN KEY(ex_id) REFERENCES exercises(id))";
         db.execSQL(createTypeTable);
-        String insertExerciseTable = "INSERT INTO exercises(name, minute) VALUES ('Full Body', '10'), ('Lower Body', '12'), ('Arm', '15'), ('Chest', '15')";
+        String insertExerciseTable = "INSERT INTO exercises(name, minute, description, image) VALUES ('Full Body', '10', 'Full body workout', 'thumb4.png'), ('Lower Body', '12', 'Lower body workout', 'thumb3.png'), ('Arm', '15', 'Arm workout', 'thumb2.png'), ('Chest', '15', 'Chest workout', 'thumb5.png')";
         db.execSQL(insertExerciseTable);
         String insertTypeTable = "INSERT INTO types(ex_id, name, description, reps) " +
                                  "VALUES ('1','Jumping Jacks','A physical jumping exercise performed by jumping to a position with the legs spread wide and the hands going overhead, sometimes in a clap, and then returning to a position with the feet together and the arms at the sides.', '30'), " +
@@ -85,7 +85,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 int ex_id = cursor.getInt(0);
                 String exName = cursor.getString(1);
                 int exMinute = cursor.getInt(2);
-                exerciseList.add(new Exercise(exName, exMinute, getTypeList(ex_id)));
+                String exDescription = cursor.getString(3);
+                int exImage = cursor.getInt(4);
+                exerciseList.add(new Exercise(exName, exMinute, exDescription, getTypeList(ex_id), exImage));
+
+//                Exercise exercise = new Exercise();
+//                exercise.setName(cursor.getString(1));
+//                exercise.setMinute(cursor.getInt(2));
+//                exercise.setImage(cursor.getInt(3));
+//                exerciseList.add(exercise);
             }while(cursor.moveToNext());
 
         }

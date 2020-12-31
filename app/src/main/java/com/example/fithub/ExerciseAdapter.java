@@ -35,8 +35,8 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.ViewHo
         Exercise exercise = exerciseList.get(position);
 
         holder.tvName.setText(exercise.getName());
-        holder.tvDesc.setText(Integer.toString(exercise.getMinute()) + " min");
-//        holder.ivThumbnail.setImageResource(exercise.image);
+        holder.tvDesc.setText(exercise.getDescription());
+        holder.ivThumbnail.setImageResource(exercise.getImage());
     }
 
     @Override

@@ -28,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
 
         rvExercises = findViewById(R.id.rvExercises);
         rvExercises.setLayoutManager(new LinearLayoutManager(this));
+        rvExercises.setFocusable(false);
+
+        findViewById(R.id.linear).requestFocus();
 
 //        test = findViewById(R.id.test);
 //
@@ -46,6 +49,11 @@ public class MainActivity extends AppCompatActivity {
 
         exerciseList =  new Vector<>();
         exerciseList = db.getExerciseList();
+
+        exerciseList.get(0).setImage(R.drawable.thumb4);
+        exerciseList.get(1).setImage(R.drawable.thumb3);
+        exerciseList.get(2).setImage(R.drawable.thumb2);
+        exerciseList.get(3).setImage(R.drawable.thumb5);
 
         adapter = new ExerciseAdapter(this, exerciseList);
         rvExercises.setAdapter(adapter);
