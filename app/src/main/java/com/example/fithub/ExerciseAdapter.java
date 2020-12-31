@@ -1,6 +1,7 @@
 package com.example.fithub;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,11 +33,22 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Exercise exercise = exerciseList.get(position);
+        final Exercise exercise = exerciseList.get(position);
 
         holder.tvName.setText(exercise.getName());
         holder.tvDesc.setText(exercise.getDescription());
         holder.ivThumbnail.setImageResource(exercise.getImage());
+        holder.linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ctx, ExerciseTypeActivity.class);
+                intent.putExtra("exec_id", exercise.getId());
+                intent.putExtra("exec_name", exercise.getName());
+                intent.putExtra("exec_min", exercise.getMinute());
+                ctx.startActivity(intent);
+            }
+        });
+
     }
 
     @Override
