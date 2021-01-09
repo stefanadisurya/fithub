@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CongratulationActivity"
+    android:background="@drawable/header2"
+    android:orientation="vertical"
+    android:paddingBottom="15dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/congratsMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/congrats_message"
+            android:layout_marginTop="100dp"
+            android:textSize="25dp"
+            android:textColor="#000"
+            android:fontFamily="sans-serif-medium"
+            />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="440dp"
+        android:layout_gravity="center"
+        android:src="@drawable/thumb6"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You have finished your workout"
+        android:textColor="#000"
+        android:textSize="17dp"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textColor="#000"
+        android:text="Keep it up!"
+        android:textSize="17dp"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/goHomeBtn"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:text="@string/gotohome_btn"
+        android:background="@drawable/custombutton"
+        android:textAllCaps="false"
+        android:textColor="#3940E9"
+        android:layout_gravity="center"
+        android:onClick="goHome"
+        />
+
+</LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -40,6 +40,10 @@ public class ExerciseTypeActivity extends AppCompatActivity {
 
     }
     public void backClick(View v){
+
+        // intent sementara untuk mengakses halaman congratulation
+//        Intent intent = new Intent(this, CongratulationActivity.class);
+
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
