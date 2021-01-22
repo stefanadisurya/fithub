@@ -11,10 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CongratulationActivity"></activity>
-        <activity android:name=".TimerActivity"
+
+        <activity android:name=".CongratulationActivity" />
+        <activity
+            android:name=".TimerActivity"
             android:hardwareAccelerated="false"
-            android:parentActivityName=".ExerciseTypeActivity"></activity>
+            android:parentActivityName=".ExerciseTypeActivity" />
         <activity
             android:name=".ExerciseTypeActivity"
             android:hardwareAccelerated="false"
