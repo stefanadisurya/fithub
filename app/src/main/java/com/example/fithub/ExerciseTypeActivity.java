@@ -7,10 +7,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.Vector;
 
@@ -39,6 +37,14 @@ public class ExerciseTypeActivity extends AppCompatActivity {
         rvTypes.setAdapter(adapter);
 
     }
+
+    public void goTimer(View view) {
+
+        //intent buat pindah ke timer
+        Intent intent = new Intent(this, TimerActivity.class);
+        startActivity(intent);
+    }
+
     public void backClick(View v){
 
         // intent sementara untuk mengakses halaman congratulation

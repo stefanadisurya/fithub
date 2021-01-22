@@ -91,6 +91,18 @@
 
             </LinearLayout>
 
+            <Button
+                android:id="@+id/goTimerBtn"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:text="Start Exercise"
+                android:background="@drawable/custombutton"
+                android:textAllCaps="false"
+                android:textColor="#3940E9"
+                android:layout_gravity="center"
+                android:onClick="goTimer"
+                />
         </LinearLayout>
 
 
