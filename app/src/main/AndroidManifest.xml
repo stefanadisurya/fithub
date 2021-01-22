@@ -11,10 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ExerciseTypeActivity"
-            android:parentActivityName=".MainActivity"
+        <activity android:name=".CongratulationActivity"></activity>
+        <activity
+            android:name=".ExerciseTypeActivity"
             android:hardwareAccelerated="false"
-            />
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
