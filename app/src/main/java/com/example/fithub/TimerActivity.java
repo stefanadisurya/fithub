@@ -71,7 +71,7 @@ public class TimerActivity extends AppCompatActivity {
             }
         }.start();
         mTimerRunning = true;
-        mButtonStartPause.setText("pause");
+        mButtonStartPause.setText("Pause");
         mButtonFinish.setVisibility(View.INVISIBLE);
     }
     private void pauseTimer() {
@@ -100,6 +100,11 @@ public class TimerActivity extends AppCompatActivity {
     public void goCongratulation(View view){
         // intent sementara untuk mengakses halaman congratulation
         Intent intent = new Intent(this, CongratulationActivity.class);
+        startActivity(intent);
+    }
+
+    public void backClick(View view) {
+        Intent intent = new Intent(this, ExerciseTypeActivity.class);
         startActivity(intent);
     }
 }

@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".CongratulationActivity"></activity>
+        <activity android:name=".TimerActivity"
+            android:hardwareAccelerated="false"
+            android:parentActivityName=".ExerciseTypeActivity"></activity>
         <activity
             android:name=".ExerciseTypeActivity"
             android:hardwareAccelerated="false"

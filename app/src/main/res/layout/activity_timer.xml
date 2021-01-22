@@ -4,10 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CongratulationActivity"
-    android:background="@drawable/header2"
+    tools:context=".TimerActivity"
     android:orientation="vertical"
-    android:paddingBottom="15dp">
+    android:paddingBottom="15dp"
+    android:background="@drawable/header2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal"
+
+        >
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:onClick="backClick"
+            app:srcCompat="@drawable/back" />
+
+        <TextView
+            android:id="@+id/type_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="Exercise"
+            android:layout_weight="5"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/cardview_light_background"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -19,8 +50,8 @@
             android:id="@+id/timerMessage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/timer_message"
-            android:layout_marginTop="100dp"
+            android:text="Let's get started!"
+            android:layout_marginTop="50dp"
             android:textSize="25dp"
             android:textColor="#000"
             android:fontFamily="sans-serif-medium"
@@ -32,7 +63,7 @@
         android:layout_width="150dp"
         android:layout_height="220dp"
         android:layout_gravity="center"
-        android:src="@drawable/thumb6"
+        android:src="@drawable/thumb1"
         />
 
     <TextView
@@ -48,32 +79,40 @@
 
     <Button
         android:id="@+id/button_start_pause"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/text_view_countdown"
         android:layout_centerHorizontal="true"
+        android:background="@drawable/custombutton2"
         android:layout_gravity="center"
-        android:text="start" />
+        android:layout_marginTop="17dp"
+        android:text="Start"
+        android:textColor="#107DAC"
+        android:textAllCaps="false"/>
     <Button
         android:id="@+id/button_finish"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/text_view_countdown"
         android:layout_gravity="center"
         android:layout_toEndOf="@+id/button_start_pause"
-        android:text="finish"
+        android:background="@drawable/custombutton2"
+        android:text="Finish"
+        android:textColor="#107DAC"
+        android:textAllCaps="false"
         android:onClick="goCongratulation"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="50dp"
         android:visibility="invisible"
         tools:visibility="visible" />
     <Button
         android:id="@+id/goHomeBtn"
-        android:layout_width="250dp"
+        android:layout_width="390dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
         android:text="@string/gotohome_btn"
         android:background="@drawable/custombutton"
         android:textAllCaps="false"
-        android:textColor="#3940E9"
+        android:textColor="#FFFFFF"
         android:layout_gravity="center"
         android:onClick="goHome"
         />
