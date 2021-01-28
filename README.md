@@ -3,8 +3,8 @@
 A simple Android workout application. Made with Android Studio.
 
 Developed by:
-- Stefan Adisurya (stefanadisurya)
-- Anthony Christoper (antonyc14)
-- Christoper irvine Sendjaya (Magizuki)
-- Jane (janedameria)
-- Clara Anggraini (claranggraini)
+- [Stefan Adisurya](https://github.com/stefanadisurya)
+- [Anthony Christoper](https://github.com/antonyc14)
+- [Christoper irvine Sendjaya](https://github.com/Magizuki)
+- [Jane](https://github.com/janedameria)
+- [Clara Anggraini](https://github.com/claranggraini)
